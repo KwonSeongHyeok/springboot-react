@@ -17,6 +17,10 @@
 		AND PW = #{pw}
 	</select>
 	
+	<select id="selectTodoList" resultType="Todo">
+		SELECT * FROM TODO
+	</select>
+	
 	<!-- DB에 있는 TODO 테이블에서 해당 번호 할 일이 완료 됐는지 isDone으로 완료 여부 수정  -->
 	<update id="update">
 		UPDATE TODO 

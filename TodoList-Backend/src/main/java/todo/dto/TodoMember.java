@@ -9,7 +9,7 @@ import lombok.ToString;
 @ToString
 public class TodoMember {
 
-	private int todoMemberNO;
+	private int todoMemberNo;
 	private String id;
 	private String pw;
 	private String name;

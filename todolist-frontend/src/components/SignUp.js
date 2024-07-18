@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-const Singup = () =>{
+const SingUp = () =>{
     const[id, setId] = useState('');
     const[pw, setPw] = useState('');
     const[pwCheck, setPwCheck] = useState('');
@@ -105,4 +105,4 @@ const Singup = () =>{
         </div>
     )
 }
-export default Singup;
+export default SingUp;

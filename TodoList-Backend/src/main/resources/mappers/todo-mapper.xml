@@ -75,4 +75,13 @@
 		INSERT INTO TODO
 		VALUES(${todoNo}, #{title}, default, ${todoMemberNo})
 	</insert>
+	
+	<insert id="GBRegister">
+		INSERT INTO GALLERYBOARD (GBPOSTNO, GBPOSTTITLE, GBPOSTCONTENT, GBPOSTIMAGES, GBPOSTCREATEDATE)
+		VALUES(GB_SEQ.NEXTVAL, #{GBPOSTTITLE}, #{GBPOSTCONTENT}, #{GBPOSTIMAGES}, SYSDATE)
+	</insert>
+	
+	
+	
+	
 </mapper>

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import todo.dto.GB;
 import todo.dto.Todo;
 import todo.dto.TodoMember;
 
@@ -16,5 +17,7 @@ public interface TodoMapper {
 	int insert(Todo todo);
 	int update(Todo todo);
 	int delete(int todoNo);
+	
+	int GBRegister(GB gb);
 	
 }

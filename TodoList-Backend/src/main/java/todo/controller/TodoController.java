@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import todo.dto.GB;
 import todo.dto.Todo;
 import todo.dto.TodoMember;
 import todo.service.TodoService;
@@ -86,6 +87,15 @@ public class TodoController {
 	@GetMapping("/test")
 	public int test() {
 		return 100;
+	}
+	
+	/** 게시판 업로드
+	 * @param gb
+	 * @return 성공 : 1, 실패 : 0
+	 */ 
+	@PostMapping("/gbregister")
+	public int GBRegister(@RequestBody GB gb) {
+		return service.GBRegister(gb);
 	}
 	
 	

@@ -7,6 +7,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import todo.dto.GB;
 import todo.dto.Todo;
 import todo.dto.TodoMember;
 import todo.mapper.TodoMapper;
@@ -62,4 +63,12 @@ public class TodoServiceImpl implements TodoService {
 	}
 	
 	// react -> map key value 형태로 키이름과 키에 해당하는 값이 들어올 것
+	
+	@Override
+	public int GBRegister(GB gb) {
+		return mapper.GBRegister(gb);
+	}
+	
+	
+	
 }

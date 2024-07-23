@@ -1,8 +1,8 @@
 package todo.service;
 
-import java.util.List;
 import java.util.Map;
 
+import todo.dto.GB;
 import todo.dto.Todo;
 import todo.dto.TodoMember;
 
@@ -19,5 +19,8 @@ public interface TodoService {
 	int update(Todo todo);
 	
 	int delete(int todoNo);
+	
+	int GBRegister(GB gb);
+	
 	
 }

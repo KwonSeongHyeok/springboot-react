@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import TodoListContext from './components/TodoListContext';
 import SignupContainer from './components/SignUp'
 import LoginComponent from './components/Login';
 import TodoListComponent from './components/TodoList';
+import NavBar from './components/NavBar';
+import GBregister from './components/GBRegister';
 
 /* App 컴포넌트 (최상위 컴포넌트) */
 function App() {
@@ -18,6 +21,11 @@ function App() {
   const [todoList, setTodoList] = useState([]);
 
   return (
+    <>
+    <NavBar />
+    <Routes>
+      <Route path="/GBRegister" element={<GBregister/>} />
+    </Routes>
     <TodoListContext.Provider value={ {loginMember, setLoginMember, todoList, setTodoList} } >
       <button onClick={ () => { setSignupView(!signupView) } } >
         { signupView ? ('회원 가입 닫기') : ('회원 가입 열기')}
@@ -38,6 +46,7 @@ function App() {
       {/* 로그인 되었을 때 로그인한 회원의 TodoList 출력 */}
       { loginMember && (<TodoListComponent/>) } 
     </TodoListContext.Provider>
+    </>
   );
 }
 

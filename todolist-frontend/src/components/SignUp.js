@@ -35,7 +35,7 @@ const SingUp = () =>{
     const 회원가입버튼 = () => {
         if(!idValidation){
             alert('아이디가 유효하지 않습니다.');
-            return;
+            return
         }
         
         if(pw !== pwCheck) {

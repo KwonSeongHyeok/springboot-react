@@ -1,0 +1,94 @@
+.App{
+  text-align: center;
+}
+
+.form-container{
+  margin-bottom: 20px;
+  padding: 10px;
+  /* #111 검정 ~~ 중간 검정과 흰색사이 색상 ~~~ #fff 흰색*/
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.form-container table {
+  width : 100%;
+}
+
+.form-container td {
+  padding: 10px;
+}
+
+button{
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+button:hover, .file-label:hover{
+  background-color: #89bbf0;
+  color: black;
+}
+
+/* form-container 내부에 input label css */
+input, textarea{
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 22px;
+}
+
+label{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.file-label{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.file-label input {
+  display: none;
+}
+
+
+.post-container{
+  margin-top: 20px;
+}
+
+.post{
+  border: 1px solid #ddd;
+  background-color: #fff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.post .images{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.post .images img{
+  /* 가로 길이 최대 크기 설정
+  200px 이상인 이미지 크기를 
+  200px이상 커지지 못하도록 조정
+  */
+  max-width: 200px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+

@@ -6,7 +6,6 @@ import SignupContainer from './components/SignUp'
 import LoginComponent from './components/Login';
 import TodoListComponent from './components/TodoList';
 import NavBar from './components/NavBar';
-import GBregister from './components/GBRegister';
 
 /* App 컴포넌트 (최상위 컴포넌트) */
 function App() {
@@ -24,7 +23,7 @@ function App() {
     <>
     <NavBar />
     <Routes>
-      <Route path="/GBRegister" element={<GBregister/>} />
+      
     </Routes>
     <TodoListContext.Provider value={ {loginMember, setLoginMember, todoList, setTodoList} } >
       <button onClick={ () => { setSignupView(!signupView) } } >

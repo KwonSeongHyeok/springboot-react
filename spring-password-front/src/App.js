@@ -8,14 +8,25 @@ function App() {
 
   const handle가입하기 = () => {
     // fetch와 formData 활용해서 회원가입 작성
+    //기본으로 multipart 이미지를 사용한다는 전제조건
     const formData = new FormData();
     formData.append('username', username);
     formData.append('password', password);
     formData.append('email', email);
 
+    const user = {
+      username : username,
+      password : password,
+      email : email
+    };
+
     fetch('http://localhost:9011/api/register', {
       method : 'POST',
-      body : formData
+      headers: {
+        'Content-Type' : 'application/json'
+      },
+      body: JSON.stringify(user)
+     // body : formData
       /*
       body{
       'username' : username,

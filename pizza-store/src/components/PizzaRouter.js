@@ -2,11 +2,13 @@ import { useState } from "react";
 import Modal from "./Modal";
 import PizzaForm from "./PizzaForm";
 import { useNavigate } from "react-router-dom";
+import '../css/PizzaRouter.css';
 
 // 메뉴 등록 버튼 검색 버튼
-const pizzaRouter = () => {
+const PizzaRouter = () => {
     /* 모달 관련 변수와 기능들 */
     const[isModalOpen, setIsModalOpen] = useState(false); // false는 닫음처리
+
     const openModal = () => setIsModalOpen(true)
     const closeModal = () => setIsModalOpen(false)
 
@@ -21,7 +23,7 @@ const pizzaRouter = () => {
 
     return(
     <div className="app-container">
-        <h1>치킨 메뉴 검색하기</h1>
+        <h1>피자 메뉴 검색하기</h1>
         <div className="search-container">
             <input type="text" placeholder="검색하고 싶은 피자 메뉴를 작성해주세요."
             value={search}
@@ -30,7 +32,7 @@ const pizzaRouter = () => {
             <button>검색하기</button>
         </div>
 
-        <button onClick={{openModal}}>메뉴 등록하기</button>
+        <button onClick={openModal}>메뉴 등록하기</button>
         {/* 모달을 열면 피자메뉴 설명 가격 작성 창이 나오고 닫으면 작성 창이 사라짐 */}
         <Modal isOpen={isModalOpen} onClose={closeModal} >
             <PizzaForm />
@@ -39,4 +41,4 @@ const pizzaRouter = () => {
     )
     
 }
-export default pizzaRouter;
+export default PizzaRouter;

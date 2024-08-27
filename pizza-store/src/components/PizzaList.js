@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
+import '../css/PizzaList.css';
 
 const PizzaList = () => {
     const[pizzas, setPizzas] = useState([]);
@@ -20,8 +21,8 @@ const PizzaList = () => {
                 {pizzas.map(pizza => (
                     <li key={pizza.id}>
                         <div className="pizza-name">{pizza.pizzaName}</div>
-                        <div className="pizza-name">{pizza.description}</div>
-                        <div className="pizza-name">{pizza.price}원</div>
+                        <div className="pizza-description">{pizza.description}</div>
+                        <div className="pizza-price">{pizza.price}원</div>
                         <button>상세보기</button>
                     </li>
                 ))}
